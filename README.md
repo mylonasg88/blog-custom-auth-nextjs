@@ -11,27 +11,28 @@ This is a porfolio site template complete with a blog. Includes:
 - Vercel Speed Insights / Web Analytics
 - Geist font
 
-## Demo
-
-https://portfolio-blog-starter.vercel.app
-
-## How to Use
-
-You can choose from one of the following two methods to use this repository:
-
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+### Clone 
 
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+git clone https://github.com/mylonasg88/blog-custom-auth-nextjs .
 ```
+
+Run local PostgresSQL
+```
+$ docker run --name custom-auth-nextjs-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+
+Your PG credentials should look like this:
+
+- Username: `postgres` (the default)
+- Password: `mysecretpassword` (as specified in your - Docker command)
+- Host: `localhost` (if connecting from your local machine to Docker)
+- Port: `5432` (the default PostgreSQL port)
+- Database: `postgres` (the default database name)
+ 
+ In your .env file paste this to connect to docker Postgres Database:
+ POSTGRES_URL=`postgres://postgres:mysecretpassword@localhost:5432/postgres`
+
 
 Then, run Next.js in development mode:
 
