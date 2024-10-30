@@ -1,16 +1,20 @@
-import Link from 'next/link'
+import { logout } from "app/auth/auth";
+import Link from "next/link";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
   },
-  '/blog': {
-    name: 'blog',
+  "/blog": {
+    name: "blog",
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  "/login": {
+    name: "login",
   },
-}
+  "/dashboard": {
+    name: "dashboard",
+  }
+};
 
 export function Navbar() {
   return (
@@ -30,11 +34,14 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              )
+              );
             })}
+            <form action={logout}>
+              <button className="hover:cursor-pointer" type="submit">Logout</button>
+            </form>
           </div>
         </nav>
       </div>
     </aside>
-  )
+  );
 }

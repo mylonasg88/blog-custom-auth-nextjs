@@ -7,19 +7,31 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.0.0-alpha.13",
-    "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
     "@vercel/analytics": "^1.1.3",
+    "@vercel/postgres": "^0.10.0",
     "@vercel/speed-insights": "^1.0.9",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
     "geist": "1.2.2",
+    "jose": "^5.9.6",
     "next": "canary",
     "next-mdx-remote": "^4.4.1",
+    "pg": "^8.13.1",
     "postcss": "^8.4.35",
-    "react": "18.2.0",
+    "postgres": "^3.4.5",
+    "react": "^18.3.1",
     "react-dom": "18.2.0",
     "sugar-high": "^0.6.0",
     "tailwindcss": "4.0.0-alpha.13",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.17",
+    "@types/pg": "^8.11.10",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "drizzle-kit": "^0.26.2"
   }
 }
